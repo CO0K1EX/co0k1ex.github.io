@@ -50,9 +50,9 @@ async function loadLeetCode() {
     const data = await res.json();
 
     await printLine(`✔ Solved: ${data.totalSolved}`);
-    await printLine(`🟢 Easy:    ${data.easySolved}`);
-    await printLine(`🟡 Medium:  ${data.mediumSolved}`);
-    await printLine(`🔴 Hard:    ${data.hardSolved}`);
+    await printLine(`🟢 Easy: ${data.easySolved}`);
+    await printLine(`🟡 Medium: ${data.mediumSolved}`);
+    await printLine(`🔴 Hard: ${data.hardSolved}`);
     await printLine(`🏆 Ranking: ${data.ranking}`);
     }
     catch {
