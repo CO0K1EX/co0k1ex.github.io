@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 20%, #0f172a, #020617);
+  color: #e2e8f0;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 15px;
+}
+
+.terminal {
+  padding: 28px;
+  max-width: 920px;
+  margin: 40px auto;
+  background: rgba(2, 6, 23, 0.85);
+  border-radius: 14px;
+  box-shadow:
+    0 0 0 1px rgba(148,163,184,.15),
+    0 20px 60px rgba(0,0,0,.6);
+  backdrop-filter: blur(12px);
+  position: relative;
+}
+
+.terminal::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow:
+    18px 0 #f59e0b,
+    36px 0 #22c55e;
+}
+
+.terminal {
+  padding-top: 34px;
+}
+
+.line {
+  margin: 6px 0;
+  white-space: pre-wrap;
+}
+
+.prompt::before {
+  content: "co0k1e-dev@portfolio ~ % ";
+  color: #38bdf8;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background: #38bdf8;
+  margin-left: 6px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.cmd-link {
+  color: #60a5fa;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.cmd-link:hover {
+  color: #93c5fd;
+  text-shadow: 0 0 6px rgba(96,165,250,.6);
+}
+
+
+.terminal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(255,255,255,0.03) 3px
+  );
+  pointer-events: none;
+}
